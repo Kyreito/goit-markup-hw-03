@@ -37,10 +37,9 @@ body {
 }
 
 .container {
-  width: 100%;
+  max-width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 15px;
 }
 
 .container:after {
@@ -52,6 +51,7 @@ body {
 /*оформлення логотипа*/
 
 .logo {
+  display: inline-block;
   font-family: var(--font-family-secondary);
   font-style: normal;
   font-weight: bold;
@@ -59,6 +59,9 @@ body {
   line-height: 1.19em;
   letter-spacing: 0.03em;
   color: var(--main-black-color);
+  margin-right: 85px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .logo-color {
@@ -67,15 +70,37 @@ body {
 
 /*оформлення кольору меню*/
 
-.nav-items,
+.nav-ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
 .nav-item-link {
+  display: inline-block;
   font-family: var(--font-family-main);
-  font-style: 400;
+  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14em;
   letter-spacing: 0.02em;
   color: var(--primary-title-color);
+}
+
+.nav-item {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 32px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav-item-link:not(:last-child) {
+  margin-bottom: 50px;
 }
 
 .nav-item-link:hover,
