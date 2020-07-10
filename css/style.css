@@ -27,7 +27,9 @@ a {
   text-decoration: none;
 }
 
-ul li {
+.list {
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -37,9 +39,12 @@ body {
 }
 
 .container {
-  max-width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 1230px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .container:after {
@@ -70,6 +75,12 @@ body {
 
 /*оформлення кольору меню*/
 
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .nav-ul {
   margin-top: 0;
   margin-bottom: 0;
@@ -89,7 +100,6 @@ body {
 
 .nav-item {
   display: inline-block;
-  margin-top: 0;
   margin-bottom: 32px;
   margin-top: 32px;
   margin-bottom: 32px;
@@ -112,9 +122,22 @@ body {
   color: var(--accent-color);
 }
 
-/*оформлення кольору контактів*/
+/*оформлення маржінів і кольору контактів*/
 
-.contacts-item,
+.contacts-ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.contacts-item {
+  display: inline-block;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.contacts-item:not(:last-child) {
+  margin-right: 60px;
+}
+
 .contacts-item-link {
   color: var(--primary-title-color);
 }
@@ -125,6 +148,10 @@ body {
 }
 
 /*оформлення кнопки*/
+
+.hero-photo {
+  max-width: 100%;
+}
 
 .modal-btn {
   background: var(--accent-color);
@@ -146,41 +173,80 @@ body {
   color: var(--primary-title-color); /*колір тексту при новеденні*/
 }
 
+/*hero section*/
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 95px;
+}
+
 .hero-modal-btn {
+  display: inline-block;
   font-family: var(--font-family-main);
-  font-style: 400;
+  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87em;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  height: 50px;
+  padding: 10px 32px;
+
   letter-spacing: 0.06em;
   color: var(--primary-white-color);
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 }
-
-/*hero section*/
 
 .main-title {
   font-family: var(--font-family-main);
   font-style: 400;
   font-weight: 900;
+  margin-top: 0px;
+  margin-bottom: 30px;
   font-size: 44px;
   line-height: 60px;
-  text-align: center;
+
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-title-color); /* потрібно буде поміняти на білий*/
 }
+
 /* quality list*/
 
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 30px;
+
+  height: 120px;
+  border-radius: 4px;
+  background-color: var(--secondary-white-color);
+}
+
+.quality-section {
+  margin-bottom: 95px;
+}
+
+.quality-list {
+  display: flex;
+}
+
+.quality-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .quality-list-item {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 10px;
+
   font-family: var(--font-family-main);
-  font-style: 400;
+  font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14em;
@@ -192,8 +258,11 @@ body {
 /* опис блоку якостей дрібним шрифтом*/
 
 .discription-text {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
   font-family: Roboto;
-  font-style: 400;
+  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71em;
@@ -201,7 +270,24 @@ body {
   color: var(--primary-text-color);
 }
 
+/*Work-exemples*/
+
+.work-exemples {
+  margin-bottom: 95px;
+}
+
+.exemple-list {
+  display: flex;
+  justify-content: center;
+}
+
+.exemple-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .title-text {
+  margin-top: 0;
+  margin-bottom: 50px;
   font-family: var(--font-family-main);
   font-style: normal;
   font-weight: bold;
@@ -212,9 +298,13 @@ body {
   color: var(--primary-title-color);
 }
 
-.work-list-item {
+.work-list-text {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+
   font-family: var(--font-family-main);
-  font-style: 400;
+  font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14em;
@@ -228,7 +318,31 @@ body {
 
 /*our team*/
 
+.our-team-section {
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
+.main-page > .our-team-section:nth-last-child(2) {
+  background-color: var(--secondary-white-color);
+}
+
+.team-list {
+  display: flex;
+}
+
+.team-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-photo {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
 .team-people-name {
+  margin-top: 0;
+  margin-bottom: 10px;
   font-family: var(--font-family-main);
   font-style: normal;
   font-weight: 500;
@@ -240,6 +354,8 @@ body {
 }
 
 .professon-name {
+  margin-top: 0;
+  margin-bottom: 16px;
   font-family: var(--font-family-main);
   font-style: normal;
   font-weight: 400;
@@ -252,17 +368,43 @@ body {
 
 /*social links*/
 
-.social-list .social-link-item {
+.social-list {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-list > .social-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-list .social-wrapper {
+  /*враппер доробити іншим*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  box-shadow: none;
+}
+
+.social-wrapper:hover {
+  background-color: var(--accent-color);
+}
+
+/*.social-list .social-link-item {
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 10px;
   color: var(--primary-text-color);
-}
+}*/
 
+/*
 .social-link-item:hover,
 .social-link-item:focus {
   color: var(--accent-color);
-}
+}*/
 
 /*portfolio*/
 
