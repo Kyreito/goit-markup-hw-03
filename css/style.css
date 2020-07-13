@@ -128,11 +128,15 @@ body {
   padding-left: 0;
 }
 .contacts-item {
-  display: block;
+  display: flex;
+}
+
+.contacts-icon {
+  margin-right: 10px;
 }
 
 .contacts-item:not(:last-child) {
-  margin-right: 60px;
+  margin-right: 30px;
 }
 
 .contacts-item-link {
@@ -146,10 +150,6 @@ body {
 }
 
 /*оформлення кнопки*/
-
-.hero-photo {
-  max-width: 100%;
-}
 
 .modal-btn {
   background: var(--accent-color);
@@ -174,8 +174,16 @@ body {
 /*hero section*/
 
 .hero-section {
-  margin-bottom: 95px;
+  margin-top: 0;
   text-align: center;
+  background-color: var(--primary-text-color);
+  background-image: url("../img/Header-img.png");
+  height: 600px;
+}
+
+.wprapper-transparent {
+  background-color: rgba(47, 48, 58, 0.8);
+  height: 100%;
 }
 
 .hero-modal-btn {
@@ -187,6 +195,7 @@ body {
   line-height: 1.87em;
   height: 50px;
   padding: 10px 32px;
+  margin-bottom: 200px;
 
   letter-spacing: 0.06em;
   color: var(--primary-white-color);
@@ -199,8 +208,9 @@ body {
 
 .main-title {
   font-family: var(--font-family-main);
-  font-style: 400;
+  font-style: normal;
   font-weight: 900;
+  padding-top: 200px;
   margin-top: 0px;
   margin-bottom: 30px;
   font-size: 44px;
@@ -208,7 +218,7 @@ body {
 
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--primary-title-color); /* потрібно буде поміняти на білий*/
+  color: var(--primary-white-color);
 }
 
 /* quality list*/
@@ -227,7 +237,8 @@ body {
 }
 
 .quality-section {
-  margin-bottom: 95px;
+  padding-top: 95px;
+  padding-bottom: 95px;
 }
 
 .quality-list {
@@ -333,11 +344,11 @@ body {
   margin-right: 30px;
 }
 .team-list-item {
-  border-width: 1px;
-  border-style: solid;
   border-color: var(--secondary-white-color);
-  border-radius: 15px;
   background-color: var(--primary-white-color);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-photo {
@@ -446,7 +457,7 @@ body {
 }
 
 .portfolio-list-bnt {
-  display: inline-block;
+  display: block;
 }
 
 .portfolio-modal-btn:hover {
@@ -502,6 +513,8 @@ body {
   margin-right: 80px;
 }
 
+/*footer mailing*/
+
 .mailing {
   margin-right: 0px;
 }
@@ -512,6 +525,20 @@ body {
 
 .join-to-us {
   margin-right: 95px;
+}
+.mailing-form input {
+  display: block;
+  font-size: 16px;
+  line-height: 1.25em;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding-top: 15px;
+  padding-left: 16px;
+  padding-bottom: 15px;
+  padding-right: auto;
+  width: 358px;
+  background-color: var(--footer-backround-color);
 }
 
 .footer-btn {
@@ -578,10 +605,27 @@ body {
 
 .footer-social-list {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-social-list-item:not(:last-child) {
   margin-right: 10px;
+}
+
+.footer-social-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-wrapper:hover {
+  background-color: var(--accent-color);
 }
 
 .footer-title {

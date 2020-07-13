@@ -12,7 +12,6 @@
     />
   </head>
   <body>
-    <
     <header class="page-header">
       <div class="container main-nav">
         <nav class="main-nav">
@@ -39,11 +38,21 @@
         <div class="header-contacts">
           <ul class="contacts-ul">
             <li class="contacts-item">
+              <img
+                class="contacts-icon"
+                src="./img/envelope.svg"
+                alt="phone-icon"
+              />
               <a href="mailto:info@devstudio.com" class="contacts-item-link"
                 >info@devstudio.com</a
               >
             </li>
             <li class="contacts-item">
+              <img
+                class="contacts-icon"
+                src="./img/smartphone.svg"
+                alt="mail-icon"
+              />
               <a href="tel:380961111111" class="contacts-item-link"
                 >+38 096 111 11 11</a
               >
@@ -230,69 +239,86 @@
     </main>
 
     <!--Футер-->
-    <footer class="footer-container">
+    <footer class="footer-section">
       <div class="container">
-        <a href="/" lang="en" class="footer-logo" aria-label="Логотип">
-          <span class="footer-logo-color">Web</span> Studio</a
-        >
-        <p class="post-info">г. Киев, пр-т Леси Украинки, 26</p>
-        <ul>
-          <li class="footer-contacts-item">
-            <a href="mailto:info@devstudio.com" class="footer-cantacts-link"
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="footer-contacts-item">
-            <a href="tel:+380961111111" class="footer-cantacts-link"
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <div class="footer-contacts">
+          <a href="/" lang="en" class="footer-logo" aria-label="Логотип">
+            <span class="footer-logo-color">Web</span> Studio</a
+          >
+          <p class="post-info list">г. Киев, пр-т Леси Украинки, 26</p>
+          <ul class="list">
+            <li class="footer-contacts-item">
+              <a href="mailto:info@devstudio.com" class="footer-cantacts-link"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="footer-contacts-item">
+              <a href="tel:+380961111111" class="footer-cantacts-link"
+                >+38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </div>
 
         <!--Соцсети-->
-        <p class="footer-title">Присоединяйтесь</p>
-        <ul>
-          <li class="footer-social-list">
-            <a
-              href="/"
-              aria-label="Ссылка на Instagram"
-              class="footer-social-link-item"
-              >Instagram</a
-            >
-          </li>
-          <li class="footer-social-list">
-            <a
-              href="/"
-              aria-label="Ссылка на Tvitter"
-              class="footer-social-link-item"
-              >Tvitter</a
-            >
-          </li>
-          <li class="footer-social-list">
-            <a
-              href="/"
-              aria-label="Ссылка на Facebook"
-              class="footer-social-link-item"
-              >Facebook</a
-            >
-          </li>
-          <li class="footer-social-list">
-            <a
-              href="/"
-              aria-label="Ссылка на LinkID"
-              class="footer-social-link-item"
-              >LinkID</a
-            >
-          </li>
-        </ul>
+        <div class="join-to-us">
+          <p class="footer-title list">Присоединяйтесь</p>
+          <ul class="footer-social-list list">
+            <li class="footer-social-list-item">
+              <a
+                class="footer-social-wrapper"
+                href="#"
+                aria-label="Ссылка на Instagram"
+                class="footer-social-link-item"
+              >
+                <img src="./img/footericon/instagram.svg" alt="Instagram" />
+              </a>
+            </li>
+            <li class="footer-social-list-item">
+              <a
+                class="footer-social-wrapper"
+                href="/"
+                aria-label="Ссылка на Tvitter"
+                class="footer-social-link-item"
+              >
+                <img src="./img/footericon/twitter.svg" alt="Tvitter" />
+              </a>
+            </li>
+            <li class="footer-social-list-item">
+              <a
+                class="footer-social-wrapper"
+                href="/"
+                aria-label="Ссылка на Facebook"
+                class="footer-social-link-item"
+                ><img src="./img/footericon/facebook.svg" alt="Facebook" />
+              </a>
+            </li>
+            <li class="footer-social-list-item">
+              <a
+                class="footer-social-wrapper"
+                href="/"
+                aria-label="Ссылка на LinkID"
+                class="footer-social-link-item"
+                ><img src="./img/footericon/linkedin.svg" alt="LinkID" />
+              </a>
+            </li>
+          </ul>
+        </div>
 
         <!--Россылка-->
-        <h2 hidden>Футер сайта</h2>
-        <p class="footer-title">Подпишитесь на рассылку</p>
-        <form>
-          <span> <input type="email" name="email" placeholder="e-mail" /></span>
-        </form>
-        <button type="submit" class="modal-btn">Подписаться</button>
+
+        <div class="mailing">
+          <h2 hidden>Футер сайта</h2>
+          <p class="footer-title list">Подпишитесь на рассылку</p>
+          <div class="mailing-form">
+            <form>
+              <span
+                ><input type="email" name="email" placeholder="E-mail"
+              /></span>
+            </form>
+            <button class="footer-btn" type="submit">Подписаться</button>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
