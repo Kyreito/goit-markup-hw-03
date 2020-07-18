@@ -713,7 +713,9 @@ body {
 }
 
 .work-discription {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+  padding-left: 24px;
+  padding-right: 24px;
   font-family: var(--font-family-main);
   font-style: normal;
   font-weight: 400;
